@@ -1,0 +1,15 @@
+def decision_coffe():
+"""Función que pregunta al usuario qué tipo de café desea.
+"""
+
+    coffes = ["espresso", "latte", "cappuccino"]
+    while True:
+        decision_user = input(
+            "What would you like,(espresso/latte/cappuccino)?: ")
+        if any(coffe in decision_user for coffe in coffes):
+            print(f"You choose a {decision_user} coffe. Great!")
+            return decision_user
+            break
+        print("Choose a correct coffe.")
+
+decision_coffe()
