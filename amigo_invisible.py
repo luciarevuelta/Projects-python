@@ -79,7 +79,7 @@ def amigo_invisible():
 AFIRMACION = "si"
 
 def llamar_amigo_invisible():
-    print(f"Bienvenido al juego del ahorcado. ¡¡Buena suerte!!\n")
+    print(f"Bienvenido al juego del amigo invisible. ¡¡Buena suerte!!\n")
     decision = AFIRMACION
     while decision == AFIRMACION:
         amigo_invisible()
