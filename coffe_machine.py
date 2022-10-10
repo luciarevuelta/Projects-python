@@ -1,12 +1,14 @@
 -- #VARIABLES GLOBALES--------
+# COINS
 QUARTER = 0.25
 DIME = 0.1
 NICKLE = 0.05
 PENNIE = 0.01
-
+# PRICE COFFEES
 PRICE_ESPRESSO = 1.5
 PRICE_LATTE = 2.5
 PRICE_CAPPUCCINO = 3
+
 ------------------------------
 
 def decision_coffe():
@@ -25,16 +27,27 @@ def decision_coffe():
 
 decision_coffe()
 
-def insert_coins():
-    print("Please insert coins")
-    quarters = float(input("How many quartes?"))
-    dimes = float(input("How many dimes?"))
-    nickles = float(input("How many nickles?"))
-    pennies = float(input("How many pennies?"))
-    monetary_value = round(QUARTER * quarters + DIME * dimes + NICKLE * nickles + PENNIE * pennies,2)
-    return monetary_value
-#insert_coins()
 
+
+def insert_coins():
+    decision_user = decision_coffe()
+    if decision_user != "off":
+        print("Please insert coins")
+        while True:
+            try:
+                quarters = float(input("How many quartes?"))
+                dimes = float(input("How many dimes?"))
+                nickles = float(input("How many nickles?"))
+                pennies = float(input("How many pennies"))
+            except ValueError:
+                    print("That's not a float value! Repeat again!")
+            else:
+                monetary_value = float(round(QUARTER * quarters + DIME * dimes + NICKLE * nickles + PENNIE * pennies,2))
+                return monetary_value, decision_user
+    
+            #if (quarters.isnumeric() and dimes.isnumeric() and nickles.isnumeric() and pennies.isnumeric()):
+                #monetary_value = round(QUARTER * quarters + DIME * dimes + NICKLE * nickles + PENNIE * pennies,2)
+                #return monetary_value
 
 
 def enough_money():
