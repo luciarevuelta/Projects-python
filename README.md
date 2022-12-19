@@ -1,2 +1,2 @@
 # Games-python
-Python exercises made by me.
+Repositorio con ejercicios prácticos que permiten mejorar las habilidades de programación en Python.
